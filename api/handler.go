@@ -2,15 +2,17 @@ package api
 
 import (
 	"net/http"
+
+	api "github.com/bing-byte-9527/go-todo-list-api/api/todo"
 )
 
 // Handler represents an HTTP handler
 type Handler struct {
-	todo *TodoHandler
+	todo *api.TodoHandler
 }
 
 // NewHandler creates a new HTTP handler
-func NewHandler(todo *TodoHandler) *Handler {
+func NewHandler(todo *api.TodoHandler) *Handler {
 	return &Handler{todo: todo}
 }
 
